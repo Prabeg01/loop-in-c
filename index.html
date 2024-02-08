@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+       
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 400; 
+        }
+
+        
+        img {
+            max-width: 100%; 
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ccc;
+            display: block;
+            white-space: pre-wrap;
+        }
+      
+
+    table {
+      border: 1px solid black;
+      border-collapse: collapse;
+      margin: auto; /* This centers the table */
+    }
+
+    th, td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: center;
+    }
+    </style>
+    <title>Understanding Loops in C</title>
+   
+</head>
+<body>
+
+    <h1>Understanding the Concept of Loops in C</h1>
+    <p>Loops are fundamental constructs in programming languages, enabling the efficient execution of repetitive tasks. In the C programming language, loops play a pivotal role in controlling the flow of a program. This theoretical exploration delves into the intricacies of loops in C, unraveling the tapestry of iterative control structures. By examining the three primary loop types—for, while, and do-while—and exploring their nuances, this theory aims to provide a comprehensive understanding of how loops operate in C.</p>
+   <br>
+   <p>
+    There are mainly two types of loops in C Programming:
+     <ol>
+        <li>Entry Controlled loops: In Entry controlled loops the test condition is checked before entering the main body of the loop. For Loop and While Loop is Entry-controlled loops.</li>
+        <li>Exit Controlled loops: In Exit controlled loops the test condition is evaluated at the end of the loop body. The loop body will execute at least once, irrespective of whether the condition is true or false. do-while Loop is Exit Controlled loop.</li>
+     </ol>
+   </p>
+   <div class="container">
+    <img src="imgg.png">
+    </div>
+    <br>
+    <table width="" height="200" border="1">
+        <tr>
+          <th>Loop type</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td><a href="for.html">The 'for' Loop</a></td>
+          <td>first Initializes, then condition check, then executes the body and at last, the update is done.</td>
+        </tr>
+        <tr>
+          <td><a href="while.html">The 'while' Loop</a></td>
+          <td>first Initializes, then condition checks, and then executes the body, and updating can be inside the body.</td>
+        </tr>
+        <tr>
+          <td><a href="dowhile.html">The 'do-while' Loop</a></td>
+          <td>do-while first executes the body and then the condition check is done.</td>
+        </tr>
+        </table>
+        <p>
+            <h1>Loop Control Statements:</h1>
+            Loop control statements in C programming are used to change execution from its normal sequence.
+        </p>
+        <table width="" height="200" border="1">
+            <tr>
+              <th>Name</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td>break statement</td>
+              <td>the break statement is used to terminate the switch and loop statement. It transfers the execution to the statement immediately following the loop or switch. </td>
+            </tr>
+            <tr>
+              <td>continue statement</td>
+              <td>continue statement skips the remainder body and immediately resets its condition before reiterating it.</td>
+
+              </tr>
+            <tr>
+              <td>goto statement</td>
+              <td>goto statement transfers the control to the labeled statement.</td>
+            </tr>
+            </table>
+            <p>
+              <h1>  Infinite Loop</h1>
+              An infinite loop in C is a loop structure that continues to execute indefinitely, without ever terminating, until the program is manually interrupted or terminated by an external force. This can lead to undesirable consequences, such as the program consuming excessive CPU resources and becoming unresponsive. Infinite loops are often unintentional and are considered a logical error in programming.
+              <br>
+              Here's an example of an infinite loop in C using a while loop:
+            <br>
+            <code>
+              <pre>
+                #include <stdio.h>
+
+                  int main() {
+                      while (1) {
+                          printf("This is an infinite loop.\n");
+                      }
+                  
+                      // Code after the loop (unreachable in this case)
+                      printf("This code is unreachable.\n");
+                  
+                      return 0;
+                  }
+              </pre>
+          </code>
+          In this example, the condition 1 is always true, so the loop will continue to execute indefinitely. The printf statement inside the loop will be repeated endlessly, and the code after the loop will never be reached.
+            <br>
+            Similarly, you can create an infinite loop using a for loop or a do-while loop:
+            <br>
+            <code>
+              <pre>
+                // Infinite loop using for loop
+                #include <stdio.h>
+                
+                int main() {
+                    for (;;) {
+                        printf("This is an infinite loop.\n");
+                    }
+                
+                    // Code after the loop (unreachable in this case)
+                    printf("This code is unreachable.\n");
+                
+                    return 0;
+                }
+              </pre>
+          </code>
+          <br>
+          <code>
+            <pre>
+              // Infinite loop using do-while loop
+              #include <stdio.h>
+              
+              int main() {
+                  do {
+                      printf("This is an infinite loop.\n");
+                  } while (1);
+              
+                  // Code after the loop (unreachable in this case)
+                  printf("This code is unreachable.\n");
+              
+                  return 0;
+              }
+            </pre>
+        </code>
+        <br>
+        It's important to be cautious when writing loops to ensure that there is a condition or mechanism to exit the loop, preventing it from running indefinitely. Unintentional infinite loops can lead to program misbehavior, system resource issues, and difficulty in debugging.
+        </p>
+</body>
+</html>
